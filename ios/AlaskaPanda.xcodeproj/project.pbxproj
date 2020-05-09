@@ -148,7 +148,6 @@
 				9E2498E6BA640B5C53CF31A4 /* Pods-AlaskaPandaTests.debug.xcconfig */,
 				48697BC7B2E1E6FF94B1BE93 /* Pods-AlaskaPandaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +307,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
