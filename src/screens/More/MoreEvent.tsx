@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
     },
     ListContainer: {
-        marginTop: hp('4%'),
+        marginTop: hp('2%'),
         marginLeft: wp('6%'),
     },
     EventImageContainer: {
