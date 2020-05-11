@@ -32,9 +32,7 @@ const StackNavigation: React.SFC<Props> = props => (
 );
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-    },
+    container: {},
     TextStyle: {
       marginTop: scale(15),
       position: 'absolute',
