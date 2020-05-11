@@ -29,6 +29,8 @@ target 'AlaskaPanda' do
 
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   target 'AlaskaPandaTests' do
     inherit! :search_paths
     # Pods for testing
