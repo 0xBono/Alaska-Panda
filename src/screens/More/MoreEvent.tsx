@@ -6,6 +6,8 @@ import {
     heightPercentageToDP as hp,
   } from 'react-native-responsive-screen';
 
+import {scale} from '../../constants/size';
+
 const MoreEvent: React.FC<{}> = () => (
     <SafeAreaView style={styles.Container}>
         <StackNavigation status={true} title={'이벤트'} />
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
         marginLeft: wp('6%'),
     },
     EventImageContainer: {
-        width: hp('53%'),
+        width: scale(330),
         height: hp('25%') 
     },
     EventTextContainer: {
