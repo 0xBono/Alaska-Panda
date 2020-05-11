@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
-import Arrow from '../assets/svg/arrow';
-import Cancel from '../assets/svg/cancel'
+import Arrow from '../assets/arrow';
+import Cancel from '../assets/cancel'
 import { scale } from '../constants/size';
 
 type Props = {
