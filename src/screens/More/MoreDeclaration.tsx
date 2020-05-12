@@ -62,9 +62,7 @@ class MoreDeclaration extends React.Component<Props> {
             </View>
         </ScrollView>
         <View style={styles.FooterContainer}>
-            <ScrollView>
-                <FooterButton title={'신고하기'} />
-            </ScrollView>
+            <FooterButton title={'신고하기'} />
         </View>
     </SafeAreaView>
     );
