@@ -4,14 +4,12 @@ import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
   } from 'react-native-responsive-screen';
-import axios from 'axios';
 
 import Brand from '../../assets/TextLogo';
 
 type Props = {
-    email: string,
-    name: string,
-};
+    navigation : any
+}
 
 class ReservationApply extends React.Component<Props> {
     componentWillMount() {
@@ -20,16 +18,28 @@ class ReservationApply extends React.Component<Props> {
           name: '',
         })
     }
-    onServerPost() {
-        const {email, name} = this.state;
-        axios.post('http://54.180.134.156/reservation/insertReservation', {
-            email: email,
-            name: name,
+    onServerPost = () =>  {
+        fetch('http://54.180.134.156/reservation/insertReservation/', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: this.state.email,
+                name: this.state.name,
+            })
         })
-        .then( response => { console.log(response)})
-        .catch( response => { console.log(response)});
-    }
+        .then( response => {
+            console.log(response)
+          })
+          .catch(error => {
+            console.log(error)
+          })
+    };
     render() {
+        const { navigation } = this.props;
+        console.log("asd");
         return (
             <SafeAreaView style={styles.Container}>
                 <View style={styles.BrandContainer}>
@@ -37,11 +47,11 @@ class ReservationApply extends React.Component<Props> {
                 </View>
                 <View style={styles.InputContainer}>
                     <Text style={{marginTop: hp('5%'), color: '#DB2525', fontWeight: 'bold'}}>이메일 💌</Text>
-                    <TextInput style={styles.InputStyle} placeholder="이메일을 입력해주세요." onChangeText={(text) => {this.setState({email: text})}}/>
+                    <TextInput style={styles.InputStyle} placeholder="이메일을 입력해주세요." onChangeText={(email) => {this.setState({email: email})}}/>
                 </View>
                 <View style={styles.InputContainer}>
                     <Text style={{marginTop: hp('5%'), color: '#DB2525', fontWeight: 'bold'}}>성함 💁🏻</Text>
-                    <TextInput style={styles.InputStyle} placeholder="성함을 입력해주세요." onChangeText={(text) => {this.setState({name: text})}}/>
+                    <TextInput style={styles.InputStyle} placeholder="성함을 입력해주세요." onChangeText={(name) => {this.setState({name: name})}}/>
                 </View>
                 <View style={styles.ButtonContainer}>
                     <TouchableOpacity style={styles.ButtonStyle} activeOpacity={0.8} onPress={() => this.onServerPost()}>
