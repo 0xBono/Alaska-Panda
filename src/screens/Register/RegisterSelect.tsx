@@ -156,6 +156,7 @@ const styles = StyleSheet.create({
         marginTop: hp('0.3%'),
         marginLeft: wp('4%'),
         fontWeight: 'bold',
+        color: '#383838',
     },
 })
 
