@@ -11,7 +11,7 @@ type Props = {
 };
 
 const FooterButton: React.SFC<Props> = props => (
-  <TouchableOpacity>
+  <TouchableOpacity activeOpacity={0.8}>
     <View style={styles.container}>
       <View style={styles.button}>
         <Text style={styles.text}>{props.title}</Text>
