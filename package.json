@@ -17,14 +17,17 @@
     "react-native": "0.60.5",
     "react-native-check-box": "^2.1.7",
     "react-native-gesture-handler": "^1.6.1",
+    "react-native-image-picker": "^2.3.1",
     "react-native-markdown-display": "^6.0.1",
     "react-native-reanimated": "^1.8.0",
     "react-native-responsive-screen": "^1.4.1",
     "react-native-safe-area-context": "^1.0.0",
     "react-native-screens": "^2.7.0",
+    "react-native-simple-radio-button": "^2.7.4",
     "react-native-splash-screen": "^3.2.0",
     "react-native-svg": "^12.1.0",
-    "react-native-svg-transformer": "^0.14.3"
+    "react-native-svg-transformer": "^0.14.3",
+    "react-native-tab-view": "^2.14.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
