@@ -8,10 +8,26 @@ import org.devio.rn.splashscreen.SplashScreen; // here
 // import com.cboy.rn.splashscreen.SplashScreen; // here
 
 public class MainActivity extends ReactActivity {
+    private PermissionListener listener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         SplashScreen.show(this);
         super.onCreate(savedInstanceState);
+    }
+    @Override
+    public void setPermissionListener(PermissionListener listener)
+    {
+      this.listener = listener;
+    }
+  
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults)
+    {
+      if (listener != null)
+      {
+        listener.onRequestPermissionsResult(requestCode, permissions, grantResults);
+      }
+      super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
     /**
      * Returns the name of the main component registered from JavaScript.
