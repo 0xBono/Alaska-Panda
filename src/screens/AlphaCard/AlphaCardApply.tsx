@@ -28,7 +28,7 @@ const ImageApply = () => (
             <TextInput style={{width: wp('87%'), height: hp('8%'), borderBottomWidth: 1, borderBottomColor: '#797979', alignSelf: 'center', fontSize: scale(14)}} />
         </View>
         <View style={{marginTop: hp('2%')}}>
-            <Text style={{marginLeft: wp('6%'), marginTop: hp('2%'), color: '#797979'}}>알파카드 제목</Text>
+            <Text style={{marginLeft: wp('6%'), marginTop: hp('2%'), color: '#797979'}}>키워드</Text>
             <TextInput style={{width: wp('87%'), height: hp('8%'), borderBottomWidth: 1, borderBottomColor: '#797979', alignSelf: 'center', fontSize: scale(14)}} />
         </View>
         <View style={{width: wp('87%'), height: hp('20%'), backgroundColor: '#e2e2e2', alignSelf: 'center', marginTop: wp('6%')}}>
@@ -45,7 +45,7 @@ const VideoApply = () => (
             <TextInput style={{width: wp('87%'), height: hp('8%'), borderBottomWidth: 1, borderBottomColor: '#797979', alignSelf: 'center', fontSize: scale(14)}} />
         </View>
         <View style={{marginTop: hp('2%')}}>
-            <Text style={{marginLeft: wp('6%'), marginTop: hp('2%'), color: '#797979'}}>알파카드 제목</Text>
+            <Text style={{marginLeft: wp('6%'), marginTop: hp('2%'), color: '#797979'}}>키워드</Text>
             <TextInput style={{width: wp('87%'), height: hp('8%'), borderBottomWidth: 1, borderBottomColor: '#797979', alignSelf: 'center', fontSize: scale(14)}} />
         </View>
         <View style={{width: wp('87%'), height: hp('20%'), backgroundColor: '#e2e2e2', alignSelf: 'center', marginTop: wp('6%')}}>
