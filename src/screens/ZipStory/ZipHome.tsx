@@ -17,6 +17,7 @@ import ShopInfos from '../../components/ShopInfo';
 import { scale } from '../../constants/size';
 
 import Location from '../../assets/location';
+import Heart from '../../assets/heart'
 
 type State = NavigationState<{
     key: string;
@@ -25,35 +26,29 @@ type State = NavigationState<{
 
   const AlaskaLocal = () => (
     <View style={{flex: 1}}>
-        <ScrollView>
-            <AlaskaList />
-            <AlaskaList />
-            <AlaskaList />
-            <AlaskaList />
-            <AlaskaList />
-            <AlaskaList />
-        </ScrollView>
+        <AlaskaList />
+        <AlaskaList />
+        <AlaskaList />
+        <AlaskaList />
+        <AlaskaList />
+        <AlaskaList />
      </View>
 );
 
 const Story = () => (
     <View style={{flex: 1}}>
-        <ScrollView>
-            <AlaskaList />
-            <AlaskaList />
-            <AlaskaList />
-            <AlaskaList />
-            <AlaskaList />
-            <AlaskaList />
-        </ScrollView>
+        <AlaskaList />
+        <AlaskaList />
+        <AlaskaList />
+        <AlaskaList />
+        <AlaskaList />
+        <AlaskaList />
     </View>
 );
 
 const ShopInfo = () => (
     <View style={{flex: 1}}>
-        <ScrollView>
-            <ShopInfos />
-        </ScrollView>
+        <ShopInfos />
     </View>
 );
 
@@ -114,6 +109,10 @@ class ZipHome extends React.Component<{}, State> {
                 <View style={styles.InfoContainer}>
                     <Text style={{fontSize: scale(18), fontWeight: 'normal'}}>하나언니</Text>
                 </View>
+                <View style={styles.HeartContainer}>
+                    <Heart width={20} height={20} />
+                    <Text style={{color: '#ff6b6b', fontSize: scale(12), fontWeight: 'normal', marginTop: hp('-0.1%')}}>1234</Text>
+                </View>
                 <View style={styles.LocationContaindr}>
                     <Location />
                     <Text style={{color: '#e34d50', marginLeft: scale(10), fontSize: scale(12)}}>서울시 서초구</Text>
@@ -123,7 +122,6 @@ class ZipHome extends React.Component<{}, State> {
                     <Text style={{color: '#e34d50', fontWeight: 'normal'}}>안녕하세요 하나언니 쇼핑몰 입니다 :)</Text>
                 </View>
                 <TabView
-                    style={{marginBottom: 20}}
                     navigationState={this.state}
                     renderScene={this.renderScene}
                     renderTabBar={this.renderTabBar}
@@ -161,6 +159,11 @@ const styles = StyleSheet.create({
     InfoContainer: {
         alignSelf: 'center',
         marginTop: hp('13%'),
+    },
+    HeartContainer: {
+        flexDirection: 'row',
+        alignSelf: 'center',
+        marginTop: hp('1%'),
     },
     LocationContaindr: {
         alignSelf: 'center',
