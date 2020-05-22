@@ -10,6 +10,7 @@ import Brand from '../../assets/Logo';
 
 class RegisterMain extends Component {
     render() {
+        const {navigation} = this.props;
         return (
             <SafeAreaView style={styles.Container}>
                 <ScrollView>
@@ -19,12 +20,12 @@ class RegisterMain extends Component {
                     <View style={styles.TextContainer}>
                         <Text style={styles.TextStyle}>{'알래스카판다에 오신 것을\n환영합니다.'}</Text>
                     </View>
-                    <TouchableOpacity activeOpacity={0.8}>
+                    <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('UserLogin')}>
                         <View style={styles.ButtonContainer}>
                                 <Text style={styles.ButtonTextStyle}>로그인</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.8}>
+                    <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('RegisterSelect')}>
                         <View style={styles.ButtonSolidContainer}>
                                 <Text style={styles.ButtonSolidTextStyle}>계정 만들기</Text>
                         </View>
