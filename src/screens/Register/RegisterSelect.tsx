@@ -20,9 +20,12 @@ class RegisterSelect extends Component {
         };
     }
     render() {
+        const {navigation} = this.props;
         return (
             <SafeAreaView style={styles.Container}>
-                <StackNavigation status={true} title={'회원가입'} />
+                <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('RegisterMain')}>
+                    <StackNavigation status={true} title={'회원가입'} />
+                </TouchableOpacity>
                 <ScrollView>
                     <View style={styles.TContainer}>
                         <Text style={styles.TStyle}>회원 유형을 선택해주세요.</Text>
@@ -30,9 +33,11 @@ class RegisterSelect extends Component {
                     <TouchableOpacity activeOpacity={0.8}>
                         <View style={styles.SContainer}>
                             <View style={styles.STContainer}>
-                                <Text style={styles.TStyle}>이용자 회원가입</Text>
-                                <Text style={styles.STStyle}>{'주변에 있는 알래스카판다 가입 상점으로부터\n다양한 혜택을 받아보세요.'}</Text>
-                                <Cart style={styles.IStyle} width={30} height={30} />
+                                <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('RegisterUser')}>
+                                    <Text style={styles.TStyle}>이용자 회원가입</Text>
+                                    <Text style={styles.STStyle}>{'주변에 있는 알래스카판다 가입 상점으로부터\n다양한 혜택을 받아보세요.'}</Text>
+                                    <Cart style={styles.IStyle} width={30} height={30} />
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </TouchableOpacity>
