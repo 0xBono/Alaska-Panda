@@ -31,7 +31,9 @@ class UserLogin extends Component {
     const {navigation} = this.props;
     return (
       <SafeAreaView style={styles.Container}>
-        <StackNavigation status={true} title={'로그인'} />
+        <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('RegisterMain')}>
+          <StackNavigation status={true} title={'로그인'} />
+        </TouchableOpacity>
         <View style={styles.InputContainer}>
         <Text style={{color: '#818181'}}>E-mail</Text>
           <TextInput
@@ -106,7 +108,7 @@ class UserLogin extends Component {
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
-    backgroundColor: '#F2F5F8',
+    backgroundColor: '#FFF',
   },
   InputContainer: {
     marginTop: hp('6%'),
